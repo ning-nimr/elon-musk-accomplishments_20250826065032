@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk: Visionary and Innovator</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --section-padding: 60px 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.wsj.net/im-849543?width=1280&size=1');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: var(--section-padding);
+        }
+        
+        .section-alt {
+            background-color: var(--light-color);
+        }
+        
+        .portrait {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .img-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .img-container img:hover {
+            transform: scale(1.03);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+        }
+        
+        .nav {
+            background-color: var(--secondary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: white;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 18px;
+            }
+            
+            .right {
+                left: 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--secondary-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-container">
+            <div class="logo">Elon Musk</div>
+            <ul class="nav-links">
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#early-life">Early Life</a></li>
+                <li><a href="#early-ventures">Early Ventures</a></li>
+                <li><a href="#spacex">SpaceX</a></li>
+                <li><a href="#tesla">Tesla</a></li>
+                <li><a href="#other-ventures">Other Ventures</a></li>
+                <li><a href="#future">Future</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <img src="https://c8.alamy.com/comp/2Y8YXY3/elon-musk-portrait-of-the-south-african-born-billionaire-elon-reeve-musk-b-1971-in-2022-2Y8YXY3.jpg" alt="Elon Musk Portrait" class="portrait">
+            <h1>Elon Musk</h1>
+            <p>Visionary, Entrepreneur, and Innovator</p>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="container">
+            <h2>Introduction: Who is Elon Musk?</h2>
+            <p>Elon Musk, born on June 28, 1971, in Pretoria, South Africa, is a prominent entrepreneur and business magnate known for his leadership roles in several high-profile technology companies. As the founder, CEO, and chief engineer of SpaceX; CEO and product architect of Tesla, Inc.; owner of X (formerly Twitter); and founder of The Boring Company and Neuralink, Musk has established himself as one of the most influential innovators of the 21st century.</p>
+            <p>With a net worth estimated at $393 billion as of 2025, Musk is considered the world's richest person. His ambitious vision spans multiple industries, from electric vehicles and renewable energy to space exploration and neural technology, all united by a common goal: to address humanity's most pressing challenges and secure a sustainable future.</p>
+        </div>
+    </section>
+
+    <section id="early-life" class="section-alt">
+        <div class="container">
+            <h2>Early Life and Education</h2>
+            <p>Elon Reeve Musk was born to Maye Musk, a Canadian-born model and dietitian, and Errol Musk, a South African electromechanical engineer. He has a younger brother, Kimbal, and a younger sister, Tosca. Musk's early interest in computing led him to teach himself programming at the age of 10, and by 12, he sold a BASIC-based game called Blastar to a magazine for approximately $500.</p>
+            <p>Musk attended Waterkloof House Preparatory School, Bryanston High School, and graduated from Pretoria Boys High School. To avoid mandatory military service in apartheid-era South Africa and to facilitate his move to the United States, he applied for a Canadian passport through his mother.</p>
+            <p>In June 1989, Musk moved to Canada, where he lived with a second cousin in Saskatchewan and worked various jobs, including on a farm and at a lumber mill. In 1990, he enrolled at Queen's University in Kingston, Ontario, and two years later transferred to the University of Pennsylvania. There, he earned a Bachelor of Arts in physics and a Bachelor of Science in economics from the Wharton School.</p>
+            <p>In 1994, Musk held two internships in Silicon Valley: one at Pinnacle Research Institute, focusing on energy storage, and another at Rocket Science Games. In 1995, he was accepted into a Ph.D. program in materials science at Stanford University but left after two days to pursue entrepreneurial ventures in the burgeoning internet industry.</p>
+        </div>
+    </section>
+
+    <section id="early-ventures">
+        <div class="container">
+            <h2>Founding of Zip2 and X.com/PayPal</h2>
+            <p>Elon Musk's entrepreneurial journey began with the founding of Zip2 in 1995. Alongside his brother Kimbal Musk and Greg Kouri, Musk established Zip2 to provide online business directories and maps for newspapers, effectively creating an internet version of the yellow pages. The company secured contracts with major publications like <em>The New York Times</em> and the <em>Chicago Tribune</em>. In 1999, Compaq acquired Zip2 for $307 million, with Musk receiving $22 million for his 7% stake.</p>
+            <p>Following the sale of Zip2, Musk co-founded X.com in 1999, an online financial services and email payment company. X.com was among the first federally insured online banks and attracted over 200,000 customers within its initial months. In 2000, X.com merged with Confinity, a company that had developed a money-transfer service called PayPal. The merged entity focused on the PayPal service, which gained popularity for facilitating online payments, especially on platforms like eBay.</p>
+            <p>In 2001, the company rebranded as PayPal, and in 2002, eBay acquired PayPal for $1.5 billion in stock. Musk, as the largest shareholder with an 11.72% stake, received $175.8 million from the sale. These ventures laid the foundation for Musk's subsequent enterprises, including SpaceX and Tesla, marking the beginning of his influential presence in the technology and automotive industries.</p>
+        </div>
+    </section>
+
+    <section id="spacex" class="section-alt">
+        <div class="container">
+            <h2>SpaceX: Revolutionizing Space Exploration</h2>
+            <p>SpaceX, officially known as Space Exploration Technologies Corp., is an American aerospace manufacturer and space transport services company founded by Elon Musk in 2002. The company's mission is to reduce space transportation costs and enable the colonization of Mars.</p>
+            
+            <div class="img-container">
+                <img src="https://cdn.mos.cms.futurecdn.net/xcJGEJSUSJdVVknq5NFmMo.jpg" alt="SpaceX Falcon 9 Rocket Launch">
+            </div>
+            
+            <h3>Early Developments and Milestones</h3>
+            <p>In its initial years, SpaceX developed the Falcon 1, a small-lift launch vehicle. After three unsuccessful attempts, Falcon 1 achieved orbit on September 28, 2008, marking the first privately developed liquid-fueled rocket to do so. This success led to a $1.6 billion contract with NASA for cargo resupply missions to the International Space Station (ISS).</p>
+            
+            <h3>Advancements in Reusability</h3>
+            <p>SpaceX introduced the Falcon 9 rocket in 2010, designed for reusability. On December 22, 2015, the company achieved the first successful landing of an orbital-class rocket's first stage on land. This was followed by the first successful landing on an ocean platform on April 8, 2016. These milestones significantly reduced launch costs and revolutionized the space industry.</p>
+            
+            <div class="img-container">
+                <img src="https://cdn.mos.cms.futurecdn.net/rrShPTXFx32w9ze2EJoxmV.jpg" alt="SpaceX Crew Dragon Spacecraft">
+            </div>
+            
+            <h3>Crewed Missions and Starship Development</h3>
+            <p>In May 2020, SpaceX became the first private company to send humans into orbit with the Crew Dragon Demo-2 mission, transporting NASA astronauts to the ISS. The company is also developing Starship, a fully reusable spacecraft intended for missions to Mars and beyond. Starship aims to carry large payloads and up to 100 passengers, with the goal of making interplanetary travel feasible.</p>
+            
+            <h3>Recent Achievements</h3>
+            <p>In August 2025, SpaceX prepared for the tenth test flight of its Starship rocket, aiming to achieve key milestones in reusability and performance. The mission included ambitious tests such as a soft water landing of the Super Heavy booster and orbital maneuvers by the Starship upper stage.</p>
+        </div>
+    </section>
+
+    <section id="tesla">
+        <div class="container">
+            <h2>Tesla, Inc.: Accelerating the World's Transition to Sustainable Energy</h2>
+            <p>Tesla, Inc., founded in 2003, has significantly influenced the automotive and energy sectors through its innovations in electric vehicles (EVs) and renewable energy solutions. Under Elon Musk's leadership since 2008, Tesla has become a leader in electric vehicles and clean energy.</p>
+            
+            <div class="img-container">
+                <img src="https://www.motoringelectric.com/wp-content/uploads/2024/11/Tesla-Model-3-1.jpg" alt="Tesla Model 3 Electric Vehicle">
+            </div>
+            
+            <h3>Automotive Achievements</h3>
+            <p>In 2023, Tesla's Model Y became the world's best-selling vehicle, surpassing the Toyota Corolla and marking the first time an electric vehicle achieved this milestone. By March 2024, Tesla produced its six millionth car, underscoring its rapid production growth. The company also operates approximately 7,500 Supercharger stations with over 70,000 connectors worldwide, facilitating long-distance travel for EV owners.</p>
+            
+            <h3>Financial Performance</h3>
+            <p>Tesla has been among the world's most valuable companies, achieving a market capitalization exceeding $1 trillion between November 2024 and February 2025. However, in the second quarter of 2025, Tesla reported a 12% decline in revenue and a 16% drop in profits, attributed to a 13.5% decrease in car deliveries.</p>
+            
+            <div class="img-container">
+                <img src="https://www.topgear.com/sites/default/files/2025/01/Model-Y-2-driving-front-2.jpg" alt="Tesla Model Y Electric SUV">
+            </div>
+            
+            <h3>Energy Sector Impact</h3>
+            <p>In 2023, Tesla deployed 14.7 gigawatt-hours of battery energy storage products, a 125% increase over 2022, highlighting its growing presence in the energy storage market. The company continues to innovate in renewable energy solutions, complementing its electric vehicle offerings.</p>
+            
+            <h3>Future Directions</h3>
+            <p>Facing declining EV sales, Tesla is focusing on its robotaxi business to drive growth. However, the company encounters significant regulatory and operational challenges, including limited pilot operations and the need for further regulatory approvals. Despite these challenges, Tesla remains committed to its mission of accelerating the world's transition to sustainable energy.</p>
+        </div>
+    </section>
+
+    <section id="other-ventures" class="section-alt">
+        <div class="container">
+            <h2>Other Ventures</h2>
+            
+            <h3>SolarCity: Advancing Solar Energy Adoption</h3>
+            <p>In November 2016, Tesla Inc. completed its acquisition of SolarCity Corporation, a leading provider of solar energy services, in an all-stock transaction valued at approximately $2.6 billion. This strategic move aimed to create a vertically integrated sustainable energy company, combining Tesla's electric vehicles and energy storage products with SolarCity's solar energy solutions.</p>
+            
+            <div class="img-container">
+                <img src="https://www.renovablesverdes.com/wp-content/uploads/2024/10/SolarCity-innovaciones-en-paneles-solares.jpg" alt="SolarCity Solar Panel Installation">
+            </div>
+            
+            <h3>Neuralink: Merging Biological Intelligence with AI</h3>
+            <p>Neuralink, founded by Elon Musk in 2016, is a neurotechnology company dedicated to developing ultra-high bandwidth brain-machine interfaces (BMIs) to connect humans and computers. The primary mission is to assist individuals with neurological disorders—such as paralysis, Parkinson's disease, and epilepsy—by restoring motor and sensory functions, thereby enabling seamless interaction with technology.</p>
+            
+            <div class="img-container">
+                <img src="https://media.wired.com/photos/65fb4d4531f35d3701ae452c/3:2/w_2560%2Cc_limit/Neuralink-Update-Science.jpg" alt="Neuralink Brain Interface Technology">
+            </div>
+            
+            <p>In 2024, Neuralink commenced its first human trials after receiving FDA approval. The initial implant was performed on Noland Arbaugh, a quadriplegic who, post-implantation, regained the ability to control a computer cursor using his thoughts. This breakthrough allowed him to engage in activities like playing video games and browsing the internet.</p>
+            
+            <h3>The Boring Company: Solving Urban Congestion</h3>
+            <p>The Boring Company (TBC), founded by Elon Musk in 2017, aims to revolutionize urban transportation by constructing efficient, cost-effective underground tunnels to alleviate surface traffic congestion. Their vision encompasses creating a network of subterranean transit systems that are weatherproof, expandable, and minimally disruptive to existing city infrastructures.</p>
+            
+            <div class="img-container">
+                <img src="https://images.axios.com/bs4G_XiWK7ObmguSv4n5yfjsLkA=/0x345:5100x3214/1920x1080/2025/07/28/1753741203934.jpg" alt="The Boring Company Tunnel">
+            </div>
+            
+            <p>Key projects include the Las Vegas Convention Center (LVCC) Loop, a 1.7-mile underground transportation system connecting the LVCC's exhibition halls, and the Vegas Loop, an expansion aiming to create a 68-mile tunnel network with 104 stations. The company is also developing projects in Nashville (Music City Loop) and Dubai.</p>
+        </div>
+    </section>
+
+    <section id="philanthropy">
+        <div class="container">
+            <h2>Philanthropy and Charitable Efforts</h2>
+            <p>Elon Musk's philanthropic endeavors encompass a range of initiatives, primarily channeled through the Musk Foundation, which he established in 2001. The foundation focuses on areas such as renewable energy, space exploration, pediatric health, science and engineering education, and the development of safe artificial intelligence.</p>
+            
+            <h3>Significant Donations and Initiatives</h3>
+            <ul>
+                <li>In 2023, the Musk Foundation allocated approximately $232 million to educational causes, with $137 million directed toward "The Foundation," a nonprofit initiated by Musk to establish a K-12 school and, eventually, a university in Austin, Texas.</li>
+                <li>Musk pledged $100 million to the XPRIZE Carbon Removal competition, launched in 2021, seeking to encourage the development of technologies capable of removing carbon dioxide from the atmosphere.</li>
+                <li>In 2015, Musk contributed $10 million to the Future of Life Institute, supporting research into ensuring that artificial intelligence benefits humanity.</li>
+                <li>In response to the water crisis in Flint, Michigan, Musk donated over $480,000 in 2018 to install new water filtration systems in all public schools.</li>
+                <li>During the COVID-19 pandemic, Musk provided over 1,000 ventilators to California hospitals and supplied face shields, masks, and hand sanitizers produced by Tesla's factories.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="controversies" class="section-alt">
+        <div class="container">
+            <h2>Controversies and Criticisms</h2>
+            <p>Elon Musk, the CEO of Tesla and SpaceX, has been involved in numerous controversies and criticisms spanning various aspects of his professional and personal life.</p>
+            
+            <h3>Legal and Business Disputes</h3>
+            <p>In August 2025, Musk's companies, X (formerly Twitter) and xAI, filed a lawsuit against Apple and OpenAI, alleging monopolistic practices. Additionally, a coalition of U.S. labor unions and advocacy groups has urged state financial officers to reject Musk's new $29 billion compensation package from Tesla, arguing that such an excessive package could jeopardize public pension funds.</p>
+            
+            <h3>Workplace Practices and Employee Relations</h3>
+            <p>X (formerly Twitter) reached a tentative settlement in a $500 million class-action lawsuit filed by former employees over unpaid severance. The lawsuit represents thousands of workers dismissed after Musk's acquisition of Twitter in 2022. Musk has also expressed negative views on trade unions, with the National Labor Relations Board having 24 open investigations into his companies as of 2025.</p>
+            
+            <h3>Public Statements and Political Involvement</h3>
+            <p>During Donald Trump's second inauguration, Musk performed a gesture interpreted by some as a Nazi or Roman salute, drawing condemnation from various politicians and organizations. His endorsement of Germany's far-right party, Alternative for Germany (AfD), has also been particularly contentious.</p>
+        </div>
+    </section>
+
+    <section id="future">
+        <div class="container">
+            <h2>Vision for the Future</h2>
+            <p>Elon Musk's future plans and vision encompass a range of ambitious projects across various industries, including space exploration, artificial intelligence, autonomous transportation, and social media.</p>
+            
+            <h3>Space Exploration: Mars Colonization</h3>
+            <p>Musk's vision for SpaceX involves making humanity a multiplanetary species by establishing a self-sustaining colony on Mars. The company is developing the Starship rocket system, designed for deep-space missions. Despite technical setbacks, SpaceX is preparing for its tenth test flight, aiming to demonstrate key capabilities such as safe reentry and in-space refueling. NASA plans to use Starship for a crewed lunar mission by 2027.</p>
+            
+            <h3>Artificial Intelligence: xAI and Grok Models</h3>
+            <p>In the AI sector, Musk's startup xAI has open-sourced its Grok 2.5 model and plans to release Grok 3 as open source within approximately six months. This move reflects a commitment to transparency and accessibility in AI development.</p>
+            
+            <h3>Autonomous Transportation: Tesla's Robotaxi and Cybercab</h3>
+            <p>Tesla is advancing its autonomous vehicle technology with plans to deploy hundreds of thousands of fully self-driving cars on U.S. roads by the end of 2026. The company has begun testing a self-driving taxi service in Austin, Texas, with plans to expand to cities like Los Angeles and San Francisco. Additionally, Tesla unveiled the Cybercab, a two-seater coupe priced under $30,000, set for production in 2026.</p>
+        </div>
+    </section>
+
+    <section id="conclusion" class="section-alt">
+        <div class="container">
+            <h2>Conclusion: Musk's Legacy</h2>
+            <p>Elon Musk's journey from a self-taught programmer to one of the world's most influential entrepreneurs exemplifies the power of vision, persistence, and innovation. Through companies like SpaceX, Tesla, Neuralink, and The Boring Company, Musk has challenged conventional thinking and pushed the boundaries of what's possible in space exploration, sustainable energy, transportation, and neural technology.</p>
+            <p>While his approach has often been controversial and his leadership style divisive, there's no denying the profound impact Musk has had on multiple industries. His relentless pursuit of ambitious goals—from making life multiplanetary to accelerating the world's transition to sustainable energy—has inspired a new generation of entrepreneurs and innovators.</p>
+            <p>As Musk continues to pursue his vision for the future, his legacy will likely be defined not just by the companies he's built or the wealth he's accumulated, but by how his innovations have addressed humanity's most pressing challenges and shaped our collective future.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Elon Musk: Visionary and Innovator</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
